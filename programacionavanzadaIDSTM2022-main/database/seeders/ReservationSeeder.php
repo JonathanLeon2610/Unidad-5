@@ -17,12 +17,21 @@ class ReservationSeeder extends Seeder
     public function run()
     {
         $reservation=new Reservation();
-        $reservation->nombre_cliente='Jonathan';
-        $reservation->telefono_cliente='61200000';
-        $reservation->tipo_habitacion='sencilla';
-        $reservation->fecha_entrada='2022-10-07';
-        $reservation->fecha_salida='2022-10-15';
-        $reservation->total='6500';
+        $reservation->date='2022-10-27';
+        $reservation->price='1985';
+        $reservation->client_id=1;
+        $reservation->save();
+
+        $reservation=new Reservation();
+        $reservation->date='2022-10-30';
+        $reservation->price='2500';
+        $reservation->client_id=1;
+        $reservation->save();
+
+        $reservation=new Reservation();
+        $reservation->date='2022-09-27';
+        $reservation->price='1985';
+        $reservation->client_id=2;
         $reservation->save();
     }
 }
