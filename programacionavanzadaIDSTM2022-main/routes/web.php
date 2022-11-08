@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('welcome');
 }); 
 
+Route::get('/login', function () {
+    return view('login');
+})->name('login'); 
+
 Route::get('users/',[UserController::class,'index']);
 
 Route::get('users/{id}',[UserController::class,'show']);
